@@ -4,7 +4,7 @@ import { Navigate } from 'react-router-dom';
 import eventsData from '../data/events.json';
 
 const EventList = () => {
-  const { isLoggedIn } = useAuth(); // Renamed here
+  const { isLoggedIn } = useAuth();
   const [events, setEvents] = useState([]);
   const [search, setSearch] = useState('');
   const [category, setCategory] = useState('All');
@@ -23,7 +23,7 @@ const EventList = () => {
     }
   }, []);
 
-  if (!isLoggedIn) { // Updated here
+  if (!isLoggedIn) {
     return <Navigate to="/" replace />;
   }
 
