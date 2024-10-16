@@ -1,0 +1,227 @@
+[
+  {
+    "id": 1,
+    "title": "Rock Concert",
+    "description": "A night of amazing rock music.",
+    "category": "Music",
+    "date": "2024-11-01",
+    "availableSeats": 50,
+    "price": 40
+  },
+  {
+    "id": 2,
+    "title": "Jazz Festival",
+    "description": "Enjoy smooth jazz tunes.",
+    "category": "Music",
+    "date": "2024-11-15",
+    "availableSeats": 30,
+    "price": 60
+  },
+  {
+    "id": 3,
+    "title": "Pop Music Night",
+    "description": "The best pop hits performed live.",
+    "category": "Music",
+    "date": "2024-12-05",
+    "availableSeats": 20,
+    "price": 80
+  },
+  {
+    "id": 4,
+    "title": "Classical Symphony",
+    "description": "A relaxing evening with classical music.",
+    "category": "Music",
+    "date": "2024-12-10",
+    "availableSeats": 15,
+    "price": 100
+  },
+  {
+    "id": 5,
+    "title": "Indie Music Showcase",
+    "description": "Featuring upcoming indie artists.",
+    "category": "Music",
+    "date": "2024-11-25",
+    "availableSeats": 40,
+    "price": 30
+  },
+  {
+    "id": 6,
+    "title": "Football Match",
+    "description": "A thrilling football match between top teams.",
+    "category": "Sports",
+    "date": "2024-10-22",
+    "availableSeats": 100,
+    "price": 120
+  },
+  {
+    "id": 7,
+    "title": "Basketball Playoffs",
+    "description": "See the top players compete in the playoffs.",
+    "category": "Sports",
+    "date": "2024-10-30",
+    "availableSeats": 50,
+    "price": 80
+  },
+  {
+    "id": 8,
+    "title": "Tennis Championship",
+    "description": "Watch the best players battle on the court.",
+    "category": "Sports",
+    "date": "2024-11-03",
+    "availableSeats": 25,
+    "price": 100
+  },
+  {
+    "id": 9,
+    "title": "Cricket Tournament",
+    "description": "Enjoy a day of exciting cricket.",
+    "category": "Sports",
+    "date": "2024-11-18",
+    "availableSeats": 75,
+    "price": 90
+  },
+  {
+    "id": 10,
+    "title": "Marathon",
+    "description": "Join the marathon or cheer the runners.",
+    "category": "Sports",
+    "date": "2024-11-26",
+    "availableSeats": 300,
+    "price": 20
+  },
+  {
+    "id": 11,
+    "title": "Photography Workshop",
+    "description": "Learn photography skills from experts.",
+    "category": "Workshops",
+    "date": "2024-10-28",
+    "availableSeats": 20,
+    "price": 50
+  },
+  {
+    "id": 12,
+    "title": "Coding Bootcamp",
+    "description": "A full-day hands-on coding bootcamp.",
+    "category": "Workshops",
+    "date": "2024-11-02",
+    "availableSeats": 30,
+    "price": 150
+  },
+  {
+    "id": 13,
+    "title": "Painting Class",
+    "description": "Express yourself through art.",
+    "category": "Workshops",
+    "date": "2024-11-09",
+    "availableSeats": 10,
+    "price": 70
+  },
+  {
+    "id": 14,
+    "title": "Cooking Workshop",
+    "description": "Learn to cook exotic dishes.",
+    "category": "Workshops",
+    "date": "2024-11-12",
+    "availableSeats": 15,
+    "price": 80
+  },
+  {
+    "id": 15,
+    "title": "Yoga Retreat",
+    "description": "A relaxing yoga session for all levels.",
+    "category": "Workshops",
+    "date": "2024-11-20",
+    "availableSeats": 25,
+    "price": 100
+  },
+  {
+    "id": 16,
+    "title": "Movie Premiere",
+    "description": "Be the first to watch the latest blockbuster.",
+    "category": "Movies",
+    "date": "2024-10-25",
+    "availableSeats": 200,
+    "price": 15
+  },
+  {
+    "id": 17,
+    "title": "Documentary Screening",
+    "description": "A thought-provoking documentary.",
+    "category": "Movies",
+    "date": "2024-11-05",
+    "availableSeats": 100,
+    "price": 10
+  },
+  {
+    "id": 18,
+    "title": "Horror Movie Night",
+    "description": "Experience the scariest films.",
+    "category": "Movies",
+    "date": "2024-10-31",
+    "availableSeats": 150,
+    "price": 12
+  },
+  {
+    "id": 19,
+    "title": "Comedy Film Festival",
+    "description": "Laugh out loud with the best comedies.",
+    "category": "Movies",
+    "date": "2024-11-10",
+    "availableSeats": 120,
+    "price": 8
+  },
+  {
+    "id": 20,
+    "title": "Indie Film Showcase",
+    "description": "Discover new indie films.",
+    "category": "Movies",
+    "date": "2024-11-22",
+    "availableSeats": 80,
+    "price": 10
+  },
+  {
+    "id": 21,
+    "title": "Art Exhibition",
+    "description": "Explore the latest art installations.",
+    "category": "Exhibitions",
+    "date": "2024-11-14",
+    "availableSeats": 50,
+    "price": 30
+  },
+  {
+    "id": 22,
+    "title": "Science Fair",
+    "description": "See exciting science projects on display.",
+    "category": "Exhibitions",
+    "date": "2024-11-18",
+    "availableSeats": 100,
+    "price": 20
+  },
+  {
+    "id": 23,
+    "title": "Book Fair",
+    "description": "Browse and buy books from various genres.",
+    "category": "Exhibitions",
+    "date": "2024-11-30",
+    "availableSeats": 200,
+    "price": 10
+  },
+  {
+    "id": 24,
+    "title": "Tech Expo",
+    "description": "Discover the latest tech innovations.",
+    "category": "Exhibitions",
+    "date": "2024-12-01",
+    "availableSeats": 150,
+    "price": 50
+  },
+  {
+    "id": 25,
+    "title": "Photography Exhibition",
+    "description": "A display of stunning photographs.",
+    "category": "Exhibitions",
+    "date": "2024-12-03",
+    "availableSeats": 60,
+    "price": 25
+  }
+]
