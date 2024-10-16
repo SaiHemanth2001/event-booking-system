@@ -4,7 +4,7 @@ import { Navigate } from 'react-router-dom';
 import eventsData from '../data/events.json';
 
 const EventList = () => {
-  const { isLoggedIn } = useAuth();
+  const { isLoggedIn, logout } = useAuth();
   const [events, setEvents] = useState([]);
   const [search, setSearch] = useState('');
   const [category, setCategory] = useState('All');
@@ -51,7 +51,10 @@ const EventList = () => {
 
   return (
     <div className="container">
-      <h2>Event List</h2>
+      <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+        <h2>Event List</h2>
+        <button onClick={logout}>Logout</button>
+      </div>
       <div className="filter-container">
         <input
           type="text"
