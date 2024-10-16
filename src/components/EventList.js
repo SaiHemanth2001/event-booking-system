@@ -50,20 +50,20 @@ const EventList = () => {
   if (error) return <p>Error: {error}</p>;
 
   return (
-    <div>
+    <div className="container">
       <h2>Event List</h2>
-      <div style={{ marginBottom: '1rem', display: 'flex', gap: '1rem' }}>
+      <div className="filter-container">
         <input
           type="text"
           placeholder="Search by title..."
           value={search}
           onChange={(e) => setSearch(e.target.value)}
-          style={{ padding: '0.5rem', flex: '1' }}
+          className="input"
         />
         <select
           value={category}
           onChange={(e) => setCategory(e.target.value)}
-          style={{ padding: '0.5rem' }}
+          className="select"
         >
           {categories.map((cat) => (
             <option key={cat} value={cat}>
@@ -73,10 +73,10 @@ const EventList = () => {
         </select>
       </div>
 
-      <ul>
+      <ul className="event-list">
         {filteredEvents.length > 0 ? (
           filteredEvents.map((event) => (
-            <li key={event.id} style={{ marginBottom: '1rem' }}>
+            <li key={event.id} className="event-item">
               <h3>{event.title}</h3>
               <p>{event.description}</p>
               <p>Category: {event.category}</p>
@@ -86,6 +86,7 @@ const EventList = () => {
               <button
                 onClick={() => handleBooking(event.id)}
                 disabled={event.availableSeats === 0}
+                className="button"
               >
                 {event.availableSeats > 0 ? 'Book Ticket' : 'Fully Booked'}
               </button>

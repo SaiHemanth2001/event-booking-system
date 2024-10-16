@@ -15,16 +15,16 @@ const Login = () => {
   };
 
   return (
-    <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '100vh' }}>
-      <form onSubmit={handleSubmit} style={{ width: '200px' }}>
-        <h2>Login</h2>
+    <div className="container" style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '100vh' }}>
+      <form onSubmit={handleSubmit} className="form">
+        <h2 style={{ textAlign: 'center' }}>Login</h2>
         <input
           type="text"
           placeholder="Username"
           value={username}
           onChange={(e) => setUsername(e.target.value)}
           required
-          style={{ margin: '5px 0', padding: '8px', width: '100%', boxSizing: 'border-box' }}
+          className="input"
         />
         <input
           type="password"
@@ -32,12 +32,9 @@ const Login = () => {
           value={password}
           onChange={(e) => setPassword(e.target.value)}
           required
-          style={{ margin: '5px 0', padding: '8px', width: '100%', boxSizing: 'border-box' }}
+          className="input"
         />
-        <button
-          type="submit"
-          style={{ marginTop: '10px', padding: '8px', width: '100%', backgroundColor: '#4CAF50', color: 'white', border: 'none', borderRadius: '4px' }}
-        >
+        <button type="submit" className="button">
           Login
         </button>
       </form>
