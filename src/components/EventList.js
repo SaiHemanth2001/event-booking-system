@@ -1,13 +1,13 @@
 import React, { useState, useEffect } from 'react';
 import { useAuth } from '../context/AuthContext';
-import {Navigate} from 'react-router-dom';
+import { Navigate } from 'react-router-dom';
 import eventsData from '../data/events.json';
 
 const EventList = () => {
-  const { isAuthenticated } = useAuth();
+  const { isLoggedIn } = useAuth(); // Renamed here
   const [events, setEvents] = useState([]);
-  const [searchTerm, setSearchTerm] = useState('');
-  const [selectedCategory, setSelectedCategory] = useState('All');
+  const [search, setSearch] = useState('');
+  const [category, setCategory] = useState('All');
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(null);
 
@@ -16,19 +16,21 @@ const EventList = () => {
     try {
       setEvents(eventsData);
       setError(null);
+    } catch {
+      setError('Failed to load events');
     } finally {
       setLoading(false);
     }
   }, []);
 
-  if (!isAuthenticated) {
-    return <Navigate to="/" replace />; 
+  if (!isLoggedIn) { // Updated here
+    return <Navigate to="/" replace />;
   }
 
-  const handleBooking = (eventId) => {
-    setEvents((prevEvents) =>
-      prevEvents.map((event) =>
-        event.id === eventId && event.availableSeats > 0
+  const handleBooking = (id) => {
+    setEvents((prev) =>
+      prev.map((event) =>
+        event.id === id && event.availableSeats > 0
           ? { ...event, availableSeats: event.availableSeats - 1 }
           : event
       )
@@ -37,12 +39,12 @@ const EventList = () => {
   };
 
   const filteredEvents = events.filter((event) => {
-    const matchesTitle = event.title.toLowerCase().includes(searchTerm.toLowerCase());
-    const matchesCategory =
-      selectedCategory === 'All' || event.category === selectedCategory;
-    return matchesTitle && matchesCategory;
+    const matchesTitle = event.title.toLowerCase().includes(search.toLowerCase());
+    const matchesCat = category === 'All' || event.category === category;
+    return matchesTitle && matchesCat;
   });
-  const uniqueCategories = ['All', ...new Set(events.map((event) => event.category))];
+
+  const categories = ['All', ...new Set(events.map((event) => event.category))];
 
   if (loading) return <p>Loading events...</p>;
   if (error) return <p>Error: {error}</p>;
@@ -54,18 +56,18 @@ const EventList = () => {
         <input
           type="text"
           placeholder="Search by title..."
-          value={searchTerm}
-          onChange={(e) => setSearchTerm(e.target.value)}
+          value={search}
+          onChange={(e) => setSearch(e.target.value)}
           style={{ padding: '0.5rem', flex: '1' }}
         />
         <select
-          value={selectedCategory}
-          onChange={(e) => setSelectedCategory(e.target.value)}
+          value={category}
+          onChange={(e) => setCategory(e.target.value)}
           style={{ padding: '0.5rem' }}
         >
-          {uniqueCategories.map((category) => (
-            <option key={category} value={category}>
-              {category}
+          {categories.map((cat) => (
+            <option key={cat} value={cat}>
+              {cat}
             </option>
           ))}
         </select>
